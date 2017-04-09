@@ -1,0 +1,33 @@
+import java.text.DecimalFormat;
+import java.util.*;
+public class RandomSum {
+    public static void main(String[] args) {
+        Random R = new Random();
+        float down = 0;
+        float up = 0;
+        DecimalFormat f = new DecimalFormat( "0.000");
+        W:while (true) {
+            int X = R.nextInt(10);
+            int Y = R.nextInt(10);
+            int Z = X + Y;
+            System.out.println(+X + "   " + Y);
+            Scanner S = new Scanner(System.in);
+            System.out.println("请输入两数之和：");
+            int O = S.nextInt();
+            if (O == -1) {
+                System.out.println("Game Over");
+                break;
+            }
+            down+=1;
+            //System.out.println(down);
+                if (O == Z) { 
+                    System.out.println("答对了！");
+                    up+=1;
+                }
+				if (O != Z) {
+                    System.out.println("答错了！");
+                    }
+                }
+        System.out.println("您的正确率为：" + f.format(up/down));
+            }
+		}

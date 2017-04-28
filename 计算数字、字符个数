@@ -1,0 +1,26 @@
+import java.util.*;
+public class CharNum {
+	public static void main(String[] args){
+		int letter=0,digit=0,space=0;
+		Scanner s=new Scanner(System.in);
+		System.out.println("请输入一行字符");
+		String str=s.nextLine();
+		char[] c=str.toCharArray();
+		for(int i=0;i<c.length;i++){
+			if(Character.isDigit(c[i])){
+				digit++;
+			}
+			if(Character.isLetter(c[i])){
+				letter++;
+			}
+			if(Character.isSpaceChar(c[i])){
+				space++;
+			}
+		}
+		System.out.println("输出有"+digit+"个数字");
+		System.out.println("输出有"+letter+"个字母");
+		System.out.println("输出有"+space+"个空格");
+
+	}
+
+}

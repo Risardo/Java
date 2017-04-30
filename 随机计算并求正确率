@@ -6,7 +6,7 @@ public class RandomSum {
         float down = 0;
         float up = 0;
         DecimalFormat f = new DecimalFormat( "0.000");
-        W:while (true) {
+        while (true) {
             int X = R.nextInt(10);
             int Y = R.nextInt(10);
             int Z = X + Y;
